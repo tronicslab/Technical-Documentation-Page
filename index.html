@@ -10,40 +10,657 @@
 		
 		<link rel="stylesheet" href="style.css">
 
-	</head>
+    <script type = "text/javascript">
+			// Script for example content
+			function showResult() {
+			  x = document.forms["myform"]["newinput"].value;
+			  document.forms["myform"]["result"].value = x;
+			}
+		</script>
+
+  </head>
 
 	<body>
 
 		<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-		<script>
-			document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
-		</script>
 
-		<nav id="nav-bar">
-			<header id="header"></header>
-			<img id="" src="" alt="">
-			<h1></h1>
-			<div id="" class="">
-				<a href="" class="nav-link"></a>
+		<nav id="navbar">
+			<header id="header">
+				<img id="header-image" src="images/html5.png" alt="html5 image">
+				<h1>Documentation</h1>
+			</header>
+			<div class="nav-list" id="nav-wrap">
+				<a href="#Introduction" class="nav-link active">Introduction</a>
+				<a href="#Syntax" class="nav-link">Syntax</a>
+				<a href="#Elements" class="nav-link">Elements</a>
+				<a href="#Forms_2.0" class="nav-link">Forms 2.0</a>
+				<a href="#Web_Storage" class="nav-link">Web Storage</a>
 			</div>
 		</nav>
 		
 		<main id="main-doc">
 
-			<section class="main-section" id="">
-				<header></header>
-				<p></p>
-				<code></code>
+			<section class="main-section" id="Introduction">
+				<header>Introduction</header>
+				<p>
+					Hypertext Markup Language revision 5 (HTML5) is markup language for the structure and presentation of World Wide Web contents. HTML5 supports the traditional HTML and XHTML-style syntax and other new features in its markup, New APIs, XHTML and error handling. 
+				</p>
+
+				<p>	
+					There are three organizations that are currently in charge of the specification of HTML5:
+				</p>
+
+				<ol>
+					<li>
+						Web Hypertext Application Technology Working Group (WHATWG) created the HTML5 specification and is in charge of the HTML5 development that provides open collaboration of browser vendors and other involved parties.
+					</li>
+					
+					<li>
+						World Wide Web Consortium (W3C) is in charge with delivering the HTML5 specification.
+					</li>
+					
+					<li>
+						Internet Engineering Task Force (IETF) is in charge of the development of HTML5 WebSocket API.
+					</li>
+				</ol>
+
+				<p>
+					HTML5 is an effort is to bring order to web development chaos by organizing common practices, embracing implementations from various browsers. It is massive, with over 100 specifications as part of the HTML5 specs. Understanding this, you can simplify by thinking of HTML5 this way. HTML5 is simply just an umbrella term for the next generation of web apps an how functionality will be expanded with better markup (HTML), better style (CSS), and better interactivity (JavaScript).
+				</p>
+
+				<p>
+					The specification of HTML5 that has been published currently is not yet final. HTML5 is expected due for Candidate Recommendation (CR) by 2012, and is expected for Proposed Recommendation (PR) by 2022. However, this doesn’t mean that HTML5 is not ready for use. The proposed recommendation does mean however that there will be two interoperable implementations. As of 2011, browser vendors are actively adding support for new features of HTML5.
+				</p>
+
+				<p>
+					New features of HTML5 include:
+				</p>
+
 				<ul>
-					<li></li>
-					<li></li>
+					<li>
+						New parsing rules that are not based on SGML but are oriented towards flexible parsing and compatibility.
+					</li>
+
+					<li>
+						Support of use of inline Scalar Vector Graphics (SVG) and Mathematical Markup Language (MathML) in text/html.
+					</li>
+
+					<li>
+						New available elements include article, aside, audio, bdi, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, mark, meter, nav, output, progress, rp, rt, ruby, section, source, summary, time, video and wbr.
+					</li>
+					
+					<li>
+						New available types of form controls include dates and times, email, url, search, number, range, tel and color.
+					</li>
+					
+					<li>
+						New available attributes of charset on meta and async on script.
+					</li>
+					
+					<li>
+						Global attributes that can be applied for every element that include id, tabindex, hidden, data-* or customer data attributes.
+					</li>
 				</ul>
 			</section>
 
+			<section class="main-section" id="Syntax">
+				<header>Syntax</header>
+				<p>
+					The HTML 5 language has a "custom" HTML syntax that is compatible with HTML 4 and XHTML1 documents published on the Web, but is not compatible with the more esoteric SGML features of HTML 4.
+				</p>
+
+				<p>
+					HTML 5 does not have the same syntax rules as XHTML where we needed lower case tag names, quoting our attributes, an attribute had to have a value and to close all empty elements.
+				</p>
+
+				<p>
+					HTML5 comes with a lot of flexibility and it supports the following features:
+				</p>
+
+				<ul>
+					<li>Uppercase tag names.</li>
+					<li>Quotes are optional for attributes.</li>
+					<li>Attribute values are optional.</li>
+					<li>Closing empty elements are optional.</li>
+				</ul>
+
+
+				<h3>The DOCTYPE</h3>
+
+				<p>
+					DOCTYPEs in older versions of HTML were longer because the HTML language was SGML based and therefore required a reference to a DTD. HTML 5 authors would use simple syntax to specify DOCTYPE as follows −
+				</p>
+
+				<code>
+					&lt;!DOCTYPE html&gt;
+				</code>
+				
+				<p>
+					The above syntax is case-insensitive.
+				</p>
+
+				<h3>Character Encoding</h3>
+
+				<p>
+					HTML 5 authors can use simple syntax to specify Character Encoding as follows −
+				</p>
+
+				<code>
+					&lt;meta charset = &quot;UTF-8&quot;&gt;
+				</code>
+
+				<p>
+					The above syntax is case-insensitive.
+				</p>
+
+				<h3>The &lt;script&gt; tag</h3>
+
+				<p>
+					It's common practice to add a type attribute with a value of "text/javascript" to script elements as follows −
+				</p>
+
+				<code>
+					&lt;script type = &quot;text/javascript&quot; src = &quot;scriptfile.js&quot;&gt;&lt;/script&gt; 
+				</code>
+
+				<p>
+					HTML 5 removes extra information required and you can use simply following syntax −
+				</p>
+				
+				<code>
+					&lt;script src = &quot;scriptfile.js&quot;&gt;&lt;/script&gt;
+				</code>
+
+				<h3>The &lt;link&gt; tag</h3>
+
+				<p>
+					So far you were writing <link> as follows −
+				</p>
+
+				<code>
+					&lt;link rel = &quot;stylesheet&quot; type = &quot;text/css&quot; href = &quot;stylefile.css&quot;&gt;
+				</code>
+
+				<p>
+					HTML 5 removes extra information required and you can simply use the following syntax −
+				</p>
+
+				<code>
+					&lt;link rel = &quot;stylesheet&quot; href = &quot;stylefile.css&quot;&gt;
+				</code>
+
+			</section>
+
+			<section class="main-section" id="Elements">
+				<header>Elements</header>
+				<p>paragraph</p>
+				<code>this is code</code>
+				<ul>
+					<li>item 1</li>
+					<li>item 2</li>
+				</ul>
+			</section>
+
+			<section class="main-section" id="Forms_2.0">
+				<header>Forms 2.0</header>
+				
+				<p>
+					Web Forms 2.0 is an extension to the forms features found in HTML4. Form elements and attributes in HTML5 provide a greater degree of semantic mark-up than HTML4 and free us from a great deal of tedious scripting and styling that was required in HTML4.
+				</p>
+
+				<h3>The &lt;input&gt; element in HTML4</h3>
+
+				<p>
+					HTML4 input elements use the type attribute to specify the data type.HTML4 provides following types −
+				</p>
+
+				<ol>
+					<li>
+						<b>text</b>
+						<span>
+							A free-form text field, nominally free of line breaks.
+						</span>
+					</li>
+
+					<li>
+						<b>password</b>
+						<span>
+							A free-form text field for sensitive information, nominally free of line breaks.
+						</span>
+					</li>
+
+					<li>
+						<b>checkbox</b>
+						<span>
+							A set of zero or more values from a predefined list.
+						</span>
+					</li>
+
+					<li>
+						<b>radio</b>
+						<span>
+							An enumerated value.
+						</span>
+					</li>
+
+					<li>
+						<b>submit</b>
+						<span>
+							A free form of button initiates form submission.
+						</span>
+					</li>
+
+					<li>
+						<b>file</b>
+						<span>
+							An arbitrary file with a MIME type and optionally a file name.
+						</span>
+					</li>
+
+					<li>
+						<b>image</b>
+						<span>
+							A coordinate, relative to a particular image's size, with the extra semantic that it must be the last value selected and initiates form submission.
+						</span>
+					</li>
+
+					<li>
+						<b>hidden</b>
+						<span>
+							An arbitrary string that is not normally displayed to the user.
+						</span>
+					</li>
+
+					<li>
+						<b>select</b>
+						<span>
+							An enumerated value, much like the radio type.
+						</span>
+					</li>
+
+					<li>
+						<b>textarea</b>
+						<span>
+							A free-form text field, nominally with no line break restrictions.
+						</span>
+					</li>
+
+					<li>
+						<b>button</b>
+						<span>
+							A free form of button which can initiates any event related to button.
+						</span>
+					</li>
+				</ol>
+
+				<p>
+					Following is the simple example of using labels, radio buttons, and submit buttons −
+				</p>
+
+				<form action = "#">  
+				   <p> 
+				      <label for = "firstname">first name: </label> 
+				      <input type = "text" id = "firstname"><br /> 
+				   
+				      <label for = "lastname">last name: </label> 
+				      <input type = "text" id = "lastname"><br /> 
+				   
+				      <label for = "email">email: </label> 
+				      <input type = "text" id = "email"><br> 
+				   
+				      <input type = "radio" name = "sex" value = "male"> Male<br> 
+				      <input type = "radio" name = "sex" value = "female"> Female<br> 
+				      <input type = "submit" value = "send"> <input type = "reset"> 
+				   </p> 
+				</form> 
+
+				<h3>The &lt;input&gt; element in HTML5</h3>
+
+				<p>
+					Apart from the above-mentioned attributes, HTML5 input elements introduced several new values for the type attribute. These are listed below.
+				</p>
+
+				<p>NOTE − Try all the following example using latest version of Opera browser.</p>
+
+				<ul>
+					<li>
+						<b>datetime</b>
+						<span>
+							A date and time (year, month, day, hour, minute, second, fractions of a second) encoded according to ISO 8601 with the time zone set to UTC.
+						</span>
+					</li>
+					<li>
+						<b>datetime-local</b>
+						<span>
+							A date and time (year, month, day, hour, minute, second, fractions of a second) encoded according to ISO 8601, with no time zone information.
+						</span>
+					</li>
+					<li>
+						<b>date</b>
+						<span>
+							A date (year, month, day) encoded according to ISO 8601.
+						</span>
+					</li>
+					<li>
+						<b>month</b>
+						<span>
+							A date consisting of a year and a month encoded according to ISO 8601.
+						</span>
+					</li>
+					<li>
+						<b>week</b>
+						<span>
+							A date consisting of a year and a week number encoded according to ISO 8601.
+						</span>
+					</li>
+					<li>
+						<b>time</b>
+						<span>
+							A time (hour, minute, seconds, fractional seconds) encoded according to ISO 8601.
+						</span>
+					</li>
+					<li>
+						<b>number</b>
+						<span>
+							It accepts only numerical value. The step attribute specifies the precision, defaulting to 1.
+						</span>
+					</li>
+					<li>
+						<b>range</b>
+						<span>
+							The range type is used for input fields that should contain a value from a range of numbers.
+						</span>
+					</li>
+					<li>
+						<b>email</b>
+						<span>
+							It accepts only email value. This type is used for input fields that should contain an e-mail address. If you try to submit a simple text, it forces to enter only email address in email@example.com format.
+						</span>
+					</li>
+					<li>
+						<b>url</b>
+						<span>
+							It accepts only URL value. This type is used for input fields that should contain a URL address. If you try to submit a simple text, it forces to enter only URL address either in http://www.example.com format or in http://example.com format.
+						</span>
+					</li>
+				</ul>
+
+				<h3>The &lt;output&gt; element</h3>
+
+				<p>
+					HTML5 introduced a new element &lt;output&gt; which is used to represent the result of different types of output, such as output written by a script.
+				</p>
+
+				<p>
+					You can use the for attribute to specify a relationship between the output element and other elements in the document that affected the calculation (for example, as inputs or parameters). The value of the for attribute is a space-separated list of IDs of other elements.
+				</p>
+
+				<p>
+					It will produce the following result −
+				</p>
+	   
+	      <form action = "#" name = "myform">
+	         <label>Enter a value : </label>><input type = "text" name = "newinput" />
+	         <input type = "button" value = "Result"  onclick = "showResult();" />
+	         <output name = "result"></output>
+	      </form>
+
+				<h3>The placeholder attribute</h3>
+
+				<p>
+					HTML5 introduced a new attribute called placeholder. This attribute on &lt;input&gt; and &lt;textarea&gt; elements provide a hint to the user of what can be entered in the field. The placeholder text must not contain carriage returns or line-feeds.
+				</p>
+
+				<p>
+					Here is the simple syntax for placeholder attribute −
+				</p>
+
+				<code>
+					&lt;input type = &quot;text&quot; name = &quot;search&quot; placeholder = &quot;search the web&quot;/&gt;
+				</code>
+
+				<p>
+					This attribute is supported by latest versions of Mozilla, Safari and Crome browsers only.
+				</p>
+
+				<p>
+					This will produce the following result −
+				</p>
+
+	      <form action = "#">
+	         <label>Enter email : </label><input type = "email" name = "newinput" placeholder = "email@example.com"/>
+	         <input type = "submit" value = "submit" />
+	      </form>
+
+				<h3>The autofocus attribute</h3>
+				
+				<p>
+					This is a simple one-step pattern, easily programmed in JavaScript at the time of document load, automatically focus one particular form field and jump to it of off-screen.
+				</p>
+
+				<p>
+					HTML5 introduced a new attribute called autofocus which would be used as follows −
+				</p>
+
+				<code>
+					&lt;input type = &quot;text&quot; name = &quot;search&quot; autofocus/&gt;
+				</code>
+
+				<p>
+					This attribute is supported by latest versions of Mozilla, Safari and Chrome browsers only.
+				</p>
+
+				<h3>The required attribute</h3>
+
+				<p>
+					Now you do not need to have JavaScript for client-side validations like empty text box would never be submitted because HTML5 introduced a new attribute called required which would be used as follows and would insist to have a value −
+				</p>
+
+				<code>
+					&lt;input type = &quot;text&quot; name = &quot;search&quot; required/&gt;
+				</code>
+
+				<p>
+					This attribute is supported by latest versions of Mozilla, Safari and Chrome browsers only.
+				</p>
+
+				<p>
+					It will produce the following result −
+				</p>
+   
+	      <form action = "#">
+	         <label>Enter email : </label><input type = "text" name = "newinput" required>
+	         <p>Try to submit using Submit button</p>
+	         <input type = "submit" value = "submit">
+	      </form>
+      
+			</section>
+
+			<section class="main-section" id="Web_Storage">
+				<header>Web Storage</header>
+
+				<p>
+					HTML5 introduces two mechanisms, similar to HTTP session cookies, for storing structured data on the client side and to overcome following drawbacks.
+				</p>
+
+				<p>
+					Cookies are included with every HTTP request, thereby slowing down your web application by transmitting the same data.
+				</p>
+
+				<p>
+					Cookies are included with every HTTP request, thereby sending data unencrypted over the internet.
+				</p>
+
+				<p>
+					Cookies are limited to about 4 KB of data. Not enough to store required data.
+				</p>
+
+				<p>
+					The two storages are session storage and local storage and they would be used to handle different situations.
+				</p>
+
+				<p>
+					The latest versions of pretty much every browser supports HTML5 Storage including Internet Explorer.
+				</p>
+
+				<h3>Session Storage</h3>
+				<p>
+					The Session Storage is designed for scenarios where the user is carrying out a single transaction, but could be carrying out multiple transactions in different windows at the same time.
+				</p>
+
+				<p>
+					<h4>Example</h4>
+				<br>
+					<i>For example, if a user buying plane tickets in two different windows, using the same site. If the site used cookies to keep track of which ticket the user was buying, then as the user clicked from page to page in both windows, the ticket currently being purchased would "leak" from one window to the other, potentially causing the user to buy two tickets for the same flight without really noticing.</i>
+				</p>
+
+				<p>
+					HTML5 introduces the sessionStorage attribute which would be used by the sites to add data to the session storage, and it will be accessible to any page from the same site opened in that window, i.e., session and as soon as you close the window, the session would be lost.
+				</p>
+
+				<p>
+					Following is the code which would set a session variable and access that variable −
+				</p>
+
+	      <script type = "text/javascript">
+	         // Script for example content
+	         if( sessionStorage.hits ) {
+	            sessionStorage.hits = Number(sessionStorage.hits) +1;
+	         } else {
+	            sessionStorage.hits = 1;
+	         }
+	         document.write("Total Hits :" + sessionStorage.hits );
+
+	      </script>
+				
+				<p>This will produce the following result −</p>
+
+	      <p>Refresh the page to increase number of hits.</p>
+	      <p>Close the window and open it again and check the result.</p>
+
+				<h3>Local Storage</h3>
+				
+				<p>
+					The Local Storage is designed for storage that spans multiple windows, and lasts beyond the current session. In particular, Web applications may wish to store megabytes of user data, such as entire user-authored documents or a user's mailbox, on the client side for performance reasons.
+				<p>
+
+				<p>
+					Again, cookies do not handle this case well, because they are transmitted with every request.
+				</p>
+
+				<h4>Example</h4>
+
+				<p>
+					HTML5 introduces the localStorage attribute which would be used to access a page's local storage area without no time limit and this local storage will be available whenever you would use that page.
+				</p>
+
+				<p>
+					Following is the code which would set a local storage variable and access that variable every time this page is accessed, even next time, when you open the window −
+				</p>
+
+				<p>This will produce the following result −</p>
+		
+			  <script type = "text/javascript">
+	         // Script for example content
+	         if( localStorage.hits ) {
+	            localStorage.hits = Number(localStorage.hits) +1;
+	         } else {
+	            localStorage.hits = 1;
+	         }
+	         document.write("<p><b>Total Hits :" + localStorage.hits + "</b></p>" );
+	      </script>
+
+	      <p>Refresh the page to increase number of hits.</p>
+	      <p>Close the window and open it again and check the result.</p>
+
+				<h3>Delete Web Storage</h3>
+
+				<p>Storing sensitive data on local machine could be dangerous and could leave a security hole.</p>
+
+				<p>
+					The Session Storage Data would be deleted by the browsers immediately after the session gets terminated.
+				</p>
+
+				<p>
+					To clear a local storage setting you would need to call localStorage.remove('key'); where 'key' is the key of the value you want to remove. If you want to clear all settings, you need to call localStorage.clear() method.
+				</p>
+
+				<p>
+					Following is the code which would clear complete local storage −
+				</p>
+
+				<p>This will produce following result −</p>
+		
+	      <script type = "text/javascript">
+	         // Script for example content
+	         localStorage.clear();
+
+	         // Reset number of hits.
+	         if( localStorage.hits ) {
+	            localStorage.hits = Number(localStorage.hits) +1;
+	         } else {
+	            localStorage.hits = 1;
+	         }
+	         document.write("<p><b>Total Hits :" + localStorage.hits + "</b></p>" );
+				
+	      </script>
+
+				<p>
+					Refreshing the page would not to increase hit counter.<br>Close the window and open it again and check the result.
+				</p>
+
+			</section>
 		</main>
 		
-		<footer id="footer">
-		</footer>
+		<footer id="footer"></footer>
+
+		<!-- jQuery include for active highlighting of nav while scrolling -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+
+		<script type="text/javascript">	
+			/* Javascript for active nav bar item styling */
+			
+			// Get all buttons with class="nav-link" inside the container
+			var btns = document.getElementsByClassName("nav-link");
+
+			// Loop through the buttons and add the active class to the current/clicked button
+			for (var i = 0; i < btns.length; i++) {
+			  btns[i].addEventListener("click", function() {
+			    var current = document.getElementsByClassName("active");
+			    current[0].className = current[0].className.replace(" active", "");
+			    this.className += " active";
+			  });
+			}
+  	
+			var sections = $('section');//, 
+							 nav = $('nav');//, 
+			
+			$(window).on('scroll', function () {
+  			var cur_pos = $(this).scrollTop();
+  
+  			sections.each(function() {
+    			var top = $(this).offset().top,
+    			 bottom = top + $(this).outerHeight();
+    
+    			if (cur_pos >= top && cur_pos <= bottom) {
+      			nav.find('a').removeClass('active');
+      			nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+    			}
+  			});
+			});
+
+			nav.find('a').on('click', function () {
+  			var $el = $(this), 
+  					 id = $el.attr('href');
+  
+			  $('html, body').animate({
+			    scrollTop: $(id).offset().top
+			  }, 500);
+	  
+	  		return false;
+			});
+
+  	</script>
 
 	</body>
 
